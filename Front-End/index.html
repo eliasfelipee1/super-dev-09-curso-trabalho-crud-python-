@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aurum — Coleção de carros de luxo</title>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="icone-carro" viewBox="0 0 200 70" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 46 C10 46 22 44 34 30 C44 18 58 12 80 12 L128 12 C148 12 158 20 166 30 C176 42 190 46 190 46" />
+      <path d="M10 46 L190 46" />
+      <path d="M40 30 L74 30 L70 14" />
+      <path d="M78 30 L150 30 L142 14 L88 14 Z" />
+      <circle cx="46" cy="50" r="10" />
+      <circle cx="154" cy="50" r="10" />
+      <path d="M4 40 L10 46" />
+      <path d="M196 40 L190 46" />
+    </symbol>
+  </defs>
+</svg>
+ 
+<header class="topo">
+  <div class="logo">A<em>urum</em></div>
+  <nav>
+    <a href="#colecao">Coleção</a>
+    <a href="#rodape">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <span class="rotulo">Showroom privado</span>
+  <div class="hero-linha"></div>
+  <h1>Engenharia<br /><em>rara</em>, sob medida.</h1>
+  <p>Uma seleção curada dos automóveis mais desejados do mundo — potência, artesanato e exclusividade em cada linha.</p>
+  <div class="hero-stats">
+    <div>
+      <div class="numero" id="stat-total">0</div>
+      <div class="desc">Modelos na coleção</div>
+    </div>
+    <div>
+      <div class="numero" id="stat-marcas">0</div>
+      <div class="desc">Marcas representadas</div>
+    </div>
+    <div>
+      <div class="numero" id="stat-potencia">0</div>
+      <div class="desc">CV no mais potente</div>
+    </div>
+  </div>
+</section>
+
+<section class="colecao" id="colecao">
+  <div class="colecao-cabecalho">
+    <div>
+      <span class="rotulo">A coleção</span>
+      <h2>Selecione seu próximo capítulo</h2>
+    </div>
+    <div class="filtros" id="filtros"></div>
+  </div>
+  <div class="grade" id="grade"></div>
+</section>
+
+<footer id="rodape">
+  <span>Aurum — coleção privada de automóveis de luxo</span>
+  <span>Catálogo ilustrativo, sem fins comerciais</span>
+</footer>
+
+<div class="fundo-painel" id="fundo-painel"></div>
+<aside class="painel-detalhe" id="painel-detalhe"></aside>
+
+<script src="js/dados.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
