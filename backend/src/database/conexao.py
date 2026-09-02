@@ -1,12 +1,11 @@
-from mysql import connector
-from settings import settings
-
+import mysql.connector
+from src.settings.settings import settings
 
 def conectar():
-    return connector.connect(
+    return mysql.connector.connect(
         host=settings.db_host,
         port=settings.db_port,
         user=settings.db_user,
         password=settings.db_password,
-        database=settings.db_name
+        database=settings.db_name,
     )

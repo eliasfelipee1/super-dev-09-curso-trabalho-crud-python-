@@ -5,7 +5,7 @@ from src.schemas.categoria import Categoria, CategoriaCadastro
 
 def consultar_todos() -> List[Categoria]:
     with conectar() as conexao:
-        with conexao.cursor() as cursor:
+        with conexao.cursor(dictionary=True) as cursor:
             cursor.execute("SELECT id, nome FROM categorias")
             registros = cursor.fetchall()
 
@@ -35,7 +35,7 @@ def apagar(id: int):
 def consultar_por_id(id: int) -> Optional[Categoria]:
     sql = "SELECT id, nome FROM categorias WHERE id = %s;"
     with conectar() as conexao:
-        with conexao.cursor() as cursor:
+        with conexao.cursor(dictionary=True) as cursor:
             cursor.execute(sql, (id,))
             registro = cursor.fetchone()
 
