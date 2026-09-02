@@ -1,8 +1,7 @@
 from fastapi import APIRouter
 
-from backend.src.schemas.categoria import CategoriaCadastro, CategoriaEditar
-from backend.src.repositories import categoria_repository
-from backend.src.repositories.categoria_repository import cadastrar
+from src.schemas.categoria import CategoriaCadastro, CategoriaEditar
+from src.repositories import categoria_repository
 
 router = APIRouter()
 
@@ -15,10 +14,11 @@ def cadastrar_categoria(categoria: CategoriaCadastro):
     categoria_criada = categoria_repository.cadastrar(categoria)
     return categoria_criada
 
-@router.delete("/categorias/[id]")
+@router.delete("/categorias/{id}")
 def apagar(id: int):
     categoria_repository.apagar(id)
 
 @router.put("/categorias/{id}")
 def editar(id: int, categoria: CategoriaEditar):
-    categoria_repository.editar(id)
+    categoria_editada = categoria_repository.editar(id, categoria)
+    return categoria_editada
