@@ -1,8 +1,8 @@
 from fastapi import APIRouter
 
-from schemas.categoria import CategoriaCadastro, CategoriaEditar
-from src.repositories import categoria_repository
-from src.repositories.categoria_repository import cadastrar
+from backend.src.schemas.categoria import CategoriaCadastro, CategoriaEditar
+from backend.src.repositories import categoria_repository
+from backend.src.repositories.categoria_repository import cadastrar
 
 router = APIRouter()
 
